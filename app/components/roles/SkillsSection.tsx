@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   IconBrandReact,
   IconCode,
@@ -14,7 +13,6 @@ type CardItem = {
   title: string;
   description: string;
   content: React.ReactNode;
-  link: string;
   isLarge?: boolean;
 };
 
@@ -23,14 +21,13 @@ type PortfolioCardProps = {
 };
 
 function PortfolioCard({ item }: PortfolioCardProps) {
-  const { title, description, content, link, isLarge } = item;
+  const { title, description, content, isLarge } = item;
   const gridSpanClasses = isLarge
     ? "col-span-6 md:col-span-12 xl:col-span-6"
     : "col-span-6 xl:col-span-3";
 
   return (
-    <a
-      href={link}
+    <div
       className={`group relative w-full flex flex-col gap-5 focus:outline-none focus:ring-2 focus:rounded-xl transition-all hover:shadow-md hover:bg-cyan-500/10 ${gridSpanClasses}`}
     >
       <div className="relative w-full h-full rounded-lg border border-zinc-700 p-4 transition-colors">
@@ -42,7 +39,7 @@ function PortfolioCard({ item }: PortfolioCardProps) {
           <div className="mt-4 text-sm text-zinc-400 flex-1">{content}</div>
         </div>
       </div>
-    </a>
+    </div>
   );
 }
 
@@ -60,7 +57,6 @@ const skills: CardItem[] = [
         codebases.
       </p>
     ),
-    link: "/skills/frontend-architecture",
     isLarge: true,
   },
   {
@@ -72,7 +68,6 @@ const skills: CardItem[] = [
         Ensured typesafety across the wire by utilizing OpenAPI TypeGen.
       </p>
     ),
-    link: "/skills/api-development",
   },
   {
     title: "Databases",
@@ -84,7 +79,6 @@ const skills: CardItem[] = [
         large datasets.
       </p>
     ),
-    link: "/skills/databases",
   },
   {
     title: "Backend Engineering (Go, Node & C#)",
@@ -97,7 +91,6 @@ const skills: CardItem[] = [
         come into play to streamline deployment and keep development efficient.
       </p>
     ),
-    link: "/skills/backend-engineering",
   },
   {
     title: "UI Engineering",
@@ -109,7 +102,6 @@ const skills: CardItem[] = [
         excellence with creative design for enterprise applications.
       </p>
     ),
-    link: "/skills/ui-engineering",
   },
   {
     title: "Developer Experience",
@@ -123,7 +115,6 @@ const skills: CardItem[] = [
         autocompletion, and a minimal cognitive load for the entire team.
       </p>
     ),
-    link: "/skills/dev-experience",
   },
   {
     title: "Full‑Stack Integration",
@@ -136,7 +127,6 @@ const skills: CardItem[] = [
         integrations.
       </p>
     ),
-    link: "/skills/fullstack-integration",
   },
 ];
 
