@@ -37,6 +37,7 @@ export const links: Route.LinksFunction = () => [
   { rel: "manifest", href: "/site.webmanifest" },
 ];
 
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
