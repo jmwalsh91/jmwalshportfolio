@@ -27,6 +27,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+      <script defer data-domain="jmwalsh.dev" src="https://plausible.io/js/script.js"></script>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />

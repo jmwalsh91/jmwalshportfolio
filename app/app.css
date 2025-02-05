@@ -4,12 +4,20 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+:root {
+  --brand-default: 188, 100%, 50%;
+}
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+@layer base {
+  html,
+  body {
+    @apply bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100;
+    @media (prefers-color-scheme: dark) {
+      color-scheme: dark;
+    }
   }
 }
